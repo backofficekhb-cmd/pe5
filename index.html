@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PE5 · Gestion d'Épargne</title>
+<title>PE5 · بإذن الله تعالى</title>
 <meta name="application-name" content="PE5">
 <meta name="apple-mobile-web-app-title" content="PE5">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,7 +11,7 @@
 <meta name="theme-color" content="#0f0e1a">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='110' fill='%230f0e1a'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300b4d8'/%3E%3Cstop offset='100%25' stop-color='%2352b788'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='30' y='30' width='452' height='452' rx='90' fill='url(%23g)'/%3E%3Ctext x='256' y='345' text-anchor='middle' font-family='Arial Black' font-weight='900' font-size='200' fill='white'%3EPE5%3C/text%3E%3C/svg%3E">
 <link rel="manifest" href="data:application/json,%7B%22name%22%3A%22PE5%20Gestion%20Epargne%22%2C%22short_name%22%3A%22PE5%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230f0e1a%22%2C%22theme_color%22%3A%2200b4d8%22%2C%22start_url%22%3A%22.%22%7D">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Roboto+Mono:wght@400;500;700&family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -28,7 +28,7 @@
   --grad-p:linear-gradient(135deg,#6c63ff,#00d4ff);
   --shadow:0 4px 24px rgba(0,0,0,0.4);
 }
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+body{font-family:'Roboto',sans-serif;font-weight:400;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 15% 20%,rgba(0,180,216,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 85% 80%,rgba(82,183,136,0.06) 0%,transparent 60%);pointer-events:none;z-index:0;}
 
 /* ══ LOCK ══ */
@@ -36,11 +36,12 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .lk-wrap{z-index:1;text-align:center;width:340px;max-width:92vw;}
 .lk-logo{margin:0 auto 20px;width:100px;}
 .lk-title{font-size:26px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:3px;}
+.arabic-sub{font-family:'Reem Kufi Fun',sans-serif;font-size:1.15em;direction:rtl;unicode-bidi:embed;letter-spacing:0.02em;line-height:1.4;}
 .lk-sub2{font-size:11px;color:var(--text3);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:28px;}
 .lk-card{background:var(--card);border:1px solid var(--border2);border-radius:22px;padding:28px;}
-.lk-in{width:100%;background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:12px;padding:14px;font-family:'Outfit',sans-serif;font-size:24px;font-weight:800;text-align:center;letter-spacing:10px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;margin-bottom:14px;}
+.lk-in{width:100%;background:var(--bg2);border:1.5px solid var(--border2);color:var(--text);border-radius:12px;padding:14px;font-family:'Roboto',sans-serif;font-size:24px;font-weight:800;text-align:center;letter-spacing:10px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;margin-bottom:14px;}
 .lk-in:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,180,216,0.15);}
-.lk-btn{width:100%;background:var(--grad);color:#fff;border:none;border-radius:12px;padding:14px;font-family:'Outfit',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;letter-spacing:0.5px;}
+.lk-btn{width:100%;background:var(--grad);color:#fff;border:none;border-radius:12px;padding:14px;font-family:'Roboto',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;letter-spacing:0.5px;}
 .lk-btn:hover{opacity:0.9;transform:translateY(-1px);}
 .lk-err{font-size:12px;color:var(--red);margin-top:8px;min-height:16px;font-weight:600;}
 
@@ -54,7 +55,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .sb-logo{padding:18px 16px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
 .sb-logo-img{width:44px;height:44px;flex-shrink:0;}
 .sb-lt{font-size:16px;font-weight:800;color:var(--text);}
-.sb-ls{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.14em;}
+.sb-ls{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.14em;}.sb-ls .arabic-sub{font-size:13px;}
 .sb-nav{flex:1;padding:12px 10px;overflow-y:auto;}
 .sb-lbl{font-size:9px;color:var(--text3);letter-spacing:0.16em;text-transform:uppercase;padding:0 10px;margin:12px 0 6px;}
 .ni{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;color:var(--text2);transition:all 0.15s;margin-bottom:2px;}
@@ -79,7 +80,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .tb-title{font-size:17px;font-weight:800;color:var(--text);}
 .tb-sub{font-size:11px;color:var(--text3);margin-top:1px;}
 .tb-r{display:flex;align-items:center;gap:8px;}
-.add-btn{background:var(--grad);color:#fff;border:none;border-radius:10px;padding:9px 17px;font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;display:flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(0,180,216,0.3);}
+.add-btn{background:var(--grad);color:#fff;border:none;border-radius:10px;padding:9px 17px;font-family:'Roboto',sans-serif;font-weight:700;font-size:13px;cursor:pointer;transition:opacity 0.2s,transform 0.15s;display:flex;align-items:center;gap:6px;box-shadow:0 4px 16px rgba(0,180,216,0.3);}
 .add-btn:hover{opacity:0.9;transform:translateY(-1px);}
 .notif-btn{position:relative;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--text2);display:flex;align-items:center;justify-content:center;}
 .notif-btn .dot{position:absolute;top:6px;right:6px;width:7px;height:7px;border-radius:50%;background:var(--red);border:1.5px solid var(--bg);}
@@ -119,11 +120,11 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .vs-month{font-weight:800;color:var(--teal);font-size:13px;}
 .vs-badge{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;}
 .vs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-.vs-blk{padding:0 16px;border-right:1px solid var(--border);}
+.vs-blk{padding:0 16px;}
 .vs-blk:first-child{padding-left:0;}
-.vs-blk:last-child{border-right:none;}
+.vs-blk:last-child{padding-right:0;}
 .vs-lbl{font-size:9px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;}
-.vs-num{font-size:20px;font-weight:800;font-family:'Space Grotesk',sans-serif;line-height:1;}
+.vs-num{font-size:20px;font-weight:800;font-family:'Roboto',sans-serif;line-height:1;}
 .vs-sub{font-size:10px;color:var(--text3);margin-top:3px;}
 .vtrack{margin-top:16px;height:5px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden;}
 .vfill{height:100%;border-radius:100px;transition:width 1s cubic-bezier(0.23,1,0.32,1);}
@@ -135,7 +136,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .kc:hover{transform:translateY(-2px);}
 .kc-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
 .kc-lbl{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:5px;}
-.kc-val{font-size:22px;font-weight:800;color:var(--text);line-height:1;font-family:'Space Grotesk',sans-serif;}
+.kc-val{font-size:22px;font-weight:700;color:var(--text);line-height:1;font-family:'Roboto',sans-serif;letter-spacing:-0.01em;}
 .kc-sub{font-size:11px;color:var(--text3);margin-top:4px;}
 .kc-badge{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;margin-top:5px;}
 
@@ -144,8 +145,8 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .proj-card{padding:20px 24px;}
 .proj-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;flex-wrap:wrap;gap:10px;}
 .proj-lbl{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
-.proj-val{font-size:28px;font-weight:900;font-family:'Space Grotesk',sans-serif;}
-.proj-gap{font-size:20px;font-weight:800;font-family:'Space Grotesk',sans-serif;}
+.proj-val{font-size:28px;font-weight:900;font-family:'Roboto',sans-serif;}
+.proj-gap{font-size:20px;font-weight:800;font-family:'Roboto',sans-serif;}
 .proj-msg{font-size:11px;margin-top:4px;font-weight:600;line-height:1.4;}
 .proj-track{height:5px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden;margin-top:12px;}
 .proj-fill{height:100%;border-radius:100px;background:var(--grad);transition:width 1.2s cubic-bezier(0.23,1,0.32,1);}
@@ -168,24 +169,24 @@ table.et td{padding:11px 11px;border-bottom:1px solid rgba(255,255,255,0.04);fon
 table.et tr:last-child td{border-bottom:none;}
 table.et tr:hover td{background:rgba(0,180,216,0.04);}
 .tdm{font-weight:700;color:var(--text);}
-.tda{font-weight:700;color:var(--teal);font-family:'Space Grotesk',sans-serif;}
-.tdc{font-weight:600;color:var(--cyan);font-family:'Space Grotesk',sans-serif;}
-.tdp{font-weight:600;color:var(--text2);font-family:'Space Grotesk',sans-serif;}
+.tda{font-weight:700;color:var(--teal);font-family:'Roboto',sans-serif;}
+.tdc{font-weight:600;color:var(--cyan);font-family:'Roboto',sans-serif;}
+.tdp{font-weight:600;color:var(--text2);font-family:'Roboto',sans-serif;}
 .pill{display:inline-flex;align-items:center;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;}
 .p-ok{background:rgba(0,229,160,0.12);color:var(--green);}
 .p-en{background:rgba(255,181,71,0.12);color:var(--amber);}
 .p-ft{background:rgba(255,255,255,0.06);color:var(--text3);}
 .p-ms{background:rgba(255,92,124,0.12);color:var(--red);}
-.be{background:rgba(0,180,216,0.15);color:var(--teal);border:none;border-radius:7px;padding:4px 10px;font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;cursor:pointer;}
+.be{background:rgba(0,180,216,0.15);color:var(--teal);border:none;border-radius:7px;padding:4px 10px;font-family:'Roboto',sans-serif;font-weight:700;font-size:11px;cursor:pointer;}
 .be:hover{background:rgba(0,180,216,0.28);}
-.bd{background:rgba(255,92,124,0.12);color:var(--red);border:none;border-radius:7px;padding:4px 9px;font-family:'Outfit',sans-serif;font-weight:700;font-size:11px;cursor:pointer;margin-left:5px;}
+.bd{background:rgba(255,92,124,0.12);color:var(--red);border:none;border-radius:7px;padding:4px 9px;font-family:'Roboto',sans-serif;font-weight:700;font-size:11px;cursor:pointer;margin-left:5px;}
 
 /* ══ RECAP ══ */
 .rc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px;}
 .rcc{padding:18px;}
 .rcy{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
 .rcpl{font-size:11px;color:var(--text3);margin-bottom:3px;}
-.rcac{font-size:20px;font-weight:800;font-family:'Space Grotesk',sans-serif;}
+.rcac{font-size:20px;font-weight:800;font-family:'Roboto',sans-serif;}
 .rcbar{height:3px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden;margin-top:8px;}
 .rcbf{height:100%;border-radius:100px;}
 
@@ -199,21 +200,21 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
 .bl-type{font-size:9px;padding:2px 6px;border-radius:5px;margin-left:6px;font-weight:700;}
 .tf{background:rgba(0,180,216,0.15);color:var(--teal);}
 .tv{background:rgba(255,181,71,0.12);color:var(--amber);}
-.bl-val{font-weight:700;font-family:'Space Grotesk',sans-serif;font-size:12px;}
+.bl-val{font-weight:700;font-family:'Roboto',sans-serif;font-size:12px;}
 .bl-total{display:flex;justify-content:space-between;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 13px;margin-top:12px;}
 .bl-total span:first-child{font-size:10px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;}
-.bl-total span:last-child{font-weight:800;font-size:14px;font-family:'Space Grotesk',sans-serif;}
+.bl-total span:last-child{font-weight:800;font-size:14px;font-family:'Roboto',sans-serif;}
 
 /* ══ DARAT PAGE ══ */
 .darat-hero{padding:22px 26px;margin-bottom:20px;background:linear-gradient(135deg,rgba(82,183,136,0.12),rgba(0,180,216,0.08));border:1px solid rgba(82,183,136,0.2);border-radius:18px;}
 .darat-hero-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px;margin-bottom:16px;}
 .darat-title-big{font-size:13px;font-weight:700;color:var(--grn2);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px;}
-.darat-amount{font-size:34px;font-weight:900;font-family:'Space Grotesk',sans-serif;color:var(--text);}
+.darat-amount{font-size:34px;font-weight:900;font-family:'Roboto',sans-serif;color:var(--text);}
 .darat-sub{font-size:11px;color:var(--text3);margin-top:4px;}
 .darat-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
 .dstat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;}
 .dstat-lbl{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:5px;}
-.dstat-val{font-size:20px;font-weight:800;font-family:'Space Grotesk',sans-serif;}
+.dstat-val{font-size:20px;font-weight:800;font-family:'Roboto',sans-serif;}
 .darat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
 .darat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;transition:transform 0.2s,border-color 0.2s;}
 .darat-card:hover{transform:translateY(-2px);}
@@ -222,21 +223,21 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
 .darat-card.overdue{border-color:rgba(255,92,124,0.3);background:rgba(255,92,124,0.04);}
 .dc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;}
 .dc-month{font-size:13px;font-weight:800;color:var(--text);}
-.dc-amount{font-size:18px;font-weight:800;font-family:'Space Grotesk',sans-serif;color:var(--grn2);}
+.dc-amount{font-size:18px;font-weight:800;font-family:'Roboto',sans-serif;color:var(--grn2);}
 .dc-desc{font-size:11px;color:var(--text3);margin-bottom:14px;}
 .dc-progress{height:4px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden;margin-bottom:10px;}
 .dc-pfill{height:100%;border-radius:100px;}
 .dc-actions{display:flex;align-items:center;justify-content:space-between;}
 .dc-status{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;}
-.dc-pay-btn{background:var(--grad);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;cursor:pointer;transition:opacity 0.2s;}
+.dc-pay-btn{background:var(--grad);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-family:'Roboto',sans-serif;font-weight:700;font-size:12px;cursor:pointer;transition:opacity 0.2s;}
 .dc-pay-btn:hover{opacity:0.9;}
-.dc-unpay-btn{background:rgba(255,92,124,0.12);color:var(--red);border:none;border-radius:8px;padding:7px 14px;font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;cursor:pointer;}
+.dc-unpay-btn{background:rgba(255,92,124,0.12);color:var(--red);border:none;border-radius:8px;padding:7px 14px;font-family:'Roboto',sans-serif;font-weight:700;font-size:12px;cursor:pointer;}
 
 /* ══ NOTIF BANNER ══ */
 .notif-banner{position:fixed;top:66px;left:240px;right:0;z-index:30;padding:12px 22px;background:linear-gradient(135deg,rgba(0,180,216,0.95),rgba(82,183,136,0.95));backdrop-filter:blur(10px);display:none;align-items:center;justify-content:space-between;gap:12px;}
 .notif-banner.show{display:flex;}
 .notif-banner-txt{font-size:13px;font-weight:700;color:#fff;}
-.notif-banner-close{background:rgba(255,255,255,0.2);border:none;color:#fff;border-radius:8px;padding:5px 12px;font-family:'Outfit',sans-serif;font-weight:700;font-size:12px;cursor:pointer;}
+.notif-banner-close{background:rgba(255,255,255,0.2);border:none;color:#fff;border-radius:8px;padding:5px 12px;font-family:'Roboto',sans-serif;font-weight:700;font-size:12px;cursor:pointer;}
 
 /* ══ MOTIVATION ══ */
 .mot{padding:16px 20px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start;background:linear-gradient(135deg,rgba(0,180,216,0.07),rgba(82,183,136,0.05));border:1px solid rgba(0,180,216,0.15);border-radius:14px;}
@@ -251,13 +252,13 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
 .m-title{font-size:17px;font-weight:800;margin-bottom:20px;color:var(--text);}
 .mf{margin-bottom:13px;}
 .mf label{display:block;font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:5px;}
-.mf input,.mf select{width:100%;background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:10px;padding:11px 13px;font-family:'Outfit',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;}
+.mf input,.mf select{width:100%;background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:10px;padding:11px 13px;font-family:'Roboto',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;}
 .mf input:focus,.mf select:focus{border-color:var(--teal);}
 .mf select option{background:var(--card2);}
 .mhint{font-size:10px;color:var(--teal);margin-top:4px;font-weight:600;}
 .mactions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;}
-.m-cancel{background:rgba(255,255,255,0.06);color:var(--text2);border:1px solid var(--border);border-radius:10px;padding:10px 18px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:600;font-size:13px;}
-.m-confirm{background:var(--grad);color:#fff;border:none;border-radius:10px;padding:10px 20px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;box-shadow:0 4px 16px rgba(0,180,216,0.3);}
+.m-cancel{background:rgba(255,255,255,0.06);color:var(--text2);border:1px solid var(--border);border-radius:10px;padding:10px 18px;cursor:pointer;font-family:'Roboto',sans-serif;font-weight:600;font-size:13px;}
+.m-confirm{background:var(--grad);color:#fff;border:none;border-radius:10px;padding:10px 20px;cursor:pointer;font-family:'Roboto',sans-serif;font-weight:700;font-size:13px;box-shadow:0 4px 16px rgba(0,180,216,0.3);}
 
 /* ══ TOAST ══ */
 .toast{position:fixed;bottom:22px;right:22px;z-index:300;background:var(--card2);border:1px solid var(--green);color:var(--green);border-radius:12px;padding:11px 18px;font-size:13px;font-weight:700;transform:translateY(10px);opacity:0;transition:all 0.3s;pointer-events:none;box-shadow:var(--shadow);}
@@ -294,6 +295,88 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
   .darat-stats{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:500px){.pg{padding:14px;}.hero-val{font-size:30px;}.darat-grid{grid-template-columns:1fr;}}
+
+/* ══ ANALYTICS PAGE ══ */
+.an-hero{display:flex;gap:24px;padding:24px 28px;margin-bottom:20px;flex-wrap:wrap;}
+.an-hero-left{flex:1;min-width:260px;}
+.an-hero-right{flex-shrink:0;display:flex;flex-direction:column;align-items:center;}
+.an-card{padding:0;}
+.countdown-grid{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.cd-block{text-align:center;}
+.cd-val{font-family:'Roboto',sans-serif;font-size:36px;font-weight:800;color:var(--teal);line-height:1;}
+.cd-lbl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.15em;margin-top:2px;}
+.cd-sep{font-size:28px;font-weight:300;color:var(--text3);margin-bottom:12px;}
+.discipline-ring{position:relative;display:inline-flex;align-items:center;justify-content:center;}
+.disc-inner{position:absolute;text-align:center;}
+.disc-score{font-family:'Roboto',sans-serif;font-size:26px;font-weight:800;color:var(--text);}
+.disc-label{font-size:11px;color:var(--text3);}
+.disc-details{margin-top:10px;text-align:center;}
+
+/* Milestones */
+.milestones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:20px;}
+.ms-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;transition:transform 0.2s,border-color 0.2s;}
+.ms-card.achieved{border-color:var(--green);background:rgba(0,229,160,0.05);}
+.ms-card.next{border-color:var(--teal);background:rgba(0,180,216,0.05);animation:pulse-border 2s infinite;}
+@keyframes pulse-border{0%,100%{border-color:var(--teal);}50%{border-color:var(--cyan);}}
+.ms-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;}
+.ms-amount{font-family:'Roboto',sans-serif;font-size:15px;font-weight:700;}
+.ms-label{font-size:10px;color:var(--text3);margin-top:3px;letter-spacing:0.05em;}
+.ms-date{font-size:10px;margin-top:6px;font-weight:600;}
+.ms-prog{height:3px;background:var(--bg3);border-radius:100px;overflow:hidden;margin-top:8px;}
+.ms-prog-fill{height:100%;border-radius:100px;background:var(--grad);transition:width 1s ease;}
+
+/* Simulator */
+.sim-grid{display:grid;grid-template-columns:1fr 280px;gap:24px;flex-wrap:wrap;}
+@media(max-width:800px){.sim-grid{grid-template-columns:1fr;}}
+.sim-input-col{display:flex;flex-direction:column;gap:18px;}
+.sim-row{}
+.sim-lbl{display:block;font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.12em;font-weight:600;margin-bottom:8px;}
+.sim-slider-wrap{display:flex;align-items:center;gap:12px;}
+.sim-slider-wrap input[type=range]{flex:1;-webkit-appearance:none;height:4px;border-radius:100px;background:var(--bg3);outline:none;cursor:pointer;}
+.sim-slider-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--teal);cursor:pointer;box-shadow:0 0 8px rgba(0,180,216,0.4);}
+.sim-val{font-family:'Roboto',sans-serif;font-size:13px;font-weight:700;color:var(--teal);min-width:100px;text-align:right;}
+.sim-result-card{background:var(--bg2);border:1px solid var(--border2);border-radius:14px;padding:20px;height:100%;}
+.sim-res-lbl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;}
+.sim-res-val{font-family:'Roboto',sans-serif;font-size:26px;font-weight:800;color:var(--text);margin-top:4px;}
+.sim-res-diff{font-family:'Roboto',sans-serif;font-size:20px;font-weight:700;margin-top:4px;}
+.sim-res-date{font-size:14px;font-weight:600;color:var(--cyan);margin-top:4px;}
+
+/* Tendances */
+.tendances-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+.tend-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;}
+.tend-lbl{font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;margin-bottom:6px;}
+.tend-val{font-family:'Roboto',sans-serif;font-size:18px;font-weight:700;color:var(--text);}
+.tend-sub{font-size:11px;color:var(--text3);margin-top:4px;}
+.tend-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:5px;margin-top:5px;}
+
+/* ══ GAMIFICATION PAGE ══ */
+.gm-top-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;}
+@media(max-width:700px){.gm-top-grid{grid-template-columns:1fr;}}
+.gm-streak-card{padding:24px;text-align:center;background:linear-gradient(135deg,rgba(0,180,216,0.08),rgba(82,183,136,0.05));}
+.streak-icon-wrap{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+.streak-val{font-family:'Roboto',sans-serif;font-size:48px;font-weight:900;letter-spacing:-1px;color:var(--text);line-height:1;}
+.streak-lbl{font-size:11px;color:var(--text2);margin-top:6px;font-weight:600;}
+.streak-sub{font-size:10px;color:var(--text3);margin-top:4px;}
+
+/* Annual compare */
+.ac-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.ac-year{font-family:'Roboto',sans-serif;font-size:12px;font-weight:700;color:var(--text2);min-width:36px;}
+.ac-bar-wrap{flex:1;height:24px;background:var(--bg3);border-radius:4px;overflow:hidden;position:relative;}
+.ac-bar{height:100%;border-radius:4px;transition:width 1s cubic-bezier(0.23,1,0.32,1);display:flex;align-items:center;padding-left:10px;}
+.ac-bar-val{font-size:11px;font-weight:700;color:#fff;white-space:nowrap;}
+.ac-speed{font-size:11px;color:var(--text3);min-width:80px;text-align:right;}
+
+/* Badges */
+.badges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-bottom:24px;}
+.badge-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center;transition:transform 0.2s,box-shadow 0.2s;}
+.badge-card:hover{transform:translateY(-2px);}
+.badge-card.unlocked{box-shadow:0 4px 20px rgba(0,0,0,0.3);}
+.badge-card.locked{opacity:0.45;}
+.badge-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;}
+.badge-name{font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.badge-desc{font-size:10px;color:var(--text3);line-height:1.4;}
+.badge-date{font-size:9px;margin-top:8px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:3px;}
+.badge-lock{font-size:9px;color:var(--text3);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:4px;}
 </style>
 </head>
 <body>
@@ -325,7 +408,8 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
         <text x="42" y="148" font-family="Arial Black,sans-serif" font-weight="900" font-size="46" fill="url(#lg1)">PE5</text>
       </svg>
     </div>
-    <div class="lk-title">Gestion d'Épargne</div>
+    <div class="lk-title">PE5</div>
+    <div style="font-family:'Reem Kufi Fun',sans-serif;font-size:22px;font-weight:600;color:var(--teal);direction:rtl;letter-spacing:0.05em;margin-bottom:6px;line-height:1.5;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">بإذن الله تعالى</div>
     <div class="lk-sub2">Accès sécurisé · Personnel</div>
     <div class="lk-card">
       <input type="password" class="lk-in" id="lpwd" placeholder="••••" maxlength="10" autocomplete="current-password">
@@ -362,7 +446,7 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
         <polygon points="160,28 162,34 168,34 163,38 165,44 160,40 155,44 157,38 152,34 158,34" fill="#52b788"/>
         <text x="42" y="148" font-family="Arial Black,sans-serif" font-weight="900" font-size="46" fill="url(#slg1)">PE5</text>
       </svg>
-      <div><div class="sb-lt">PE5</div><div class="sb-ls">Gestion d'Épargne</div></div>
+      <div><div class="sb-lt">PE5</div><div class="sb-ls" style="font-family:'Reem Kufi Fun',sans-serif;font-size:13px;direction:rtl;letter-spacing:0.04em;color:var(--teal);font-weight:500;">بإذن الله تعالى</div></div>
     </div>
     <nav class="sb-nav">
       <div class="sb-lbl">Dashboard</div>
@@ -388,6 +472,15 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         Budget
       </div>
+      <div class="sb-lbl">Analyse</div>
+      <div class="ni" onclick="showPage('an')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 20V10l7-7 7 7v10"/><path d="M9 20v-5h6v5"/></svg>
+        Analytique
+      </div>
+      <div class="ni" onclick="showPage('gm')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Achievements <span id="badge-notif-dot" class="notif-dot" style="display:none"></span>
+      </div>
     </nav>
     <div class="sb-bot">
       <div class="th-row">
@@ -409,6 +502,10 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
       </div>
     </div>
     <div class="tb-r">
+      <button onclick="exportPDF()" style="background:rgba(255,181,71,0.12);color:var(--amber);border:1px solid rgba(255,181,71,0.2);border-radius:10px;padding:8px 14px;font-family:'Roboto',sans-serif;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:5px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Export PDF
+      </button>
       <div class="notif-btn" onclick="toggleNotifPanel()" title="Notifications">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>
         <span class="dot" id="notif-topbar-dot"></span>
@@ -587,7 +684,7 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
           </div>
           <div style="text-align:right">
             <div style="font-size:10px;color:var(--text3);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.1em;font-weight:700">Total annuel</div>
-            <div style="font-size:28px;font-weight:900;font-family:'Space Grotesk',sans-serif;color:var(--grn2)">50 000 DH</div>
+            <div style="font-size:28px;font-weight:900;font-family:'Roboto',sans-serif;color:var(--grn2)">50 000 DH</div>
           </div>
         </div>
         <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden">
@@ -634,6 +731,114 @@ table.et tr:hover td{background:rgba(0,180,216,0.04);}
           <div class="bl-total"><span>Solde planifié</span><span id="solde-val">—</span></div>
         </div>
       </div>
+    </div>
+
+    <!-- ═══ PAGE : ANALYTIQUE ═══ -->
+    <div class="pg" id="page-an">
+
+      <!-- Countdown -->
+      <div class="card an-hero">
+        <div class="an-hero-left">
+          <div class="stitle" style="margin-bottom:8px">Compte à rebours · Objectif Oct 2030</div>
+          <div class="countdown-grid">
+            <div class="cd-block"><div class="cd-val" id="cd-months">—</div><div class="cd-lbl">Mois</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><div class="cd-val" id="cd-weeks">—</div><div class="cd-lbl">Semaines</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><div class="cd-val" id="cd-days">—</div><div class="cd-lbl">Jours</div></div>
+          </div>
+          <div style="margin-top:14px">
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-bottom:6px">
+              <span>Déc 2025</span><span id="cd-pct-txt" style="color:var(--teal);font-weight:700">—% du temps écoulé</span><span>Oct 2030</span>
+            </div>
+            <div style="height:6px;background:var(--bg3);border-radius:100px;overflow:hidden">
+              <div id="cd-bar" style="height:100%;border-radius:100px;background:var(--grad);transition:width 1s ease;width:0%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="an-hero-right">
+          <div class="stitle" style="margin-bottom:12px">Score de discipline</div>
+          <div class="discipline-ring">
+            <svg viewBox="0 0 120 120" width="120" height="120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bg3)" stroke-width="10"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="url(#disc-grad)" stroke-width="10"
+                stroke-dasharray="314" id="disc-circle" stroke-dashoffset="314"
+                stroke-linecap="round" transform="rotate(-90 60 60)"/>
+              <defs><linearGradient id="disc-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="var(--teal)"/><stop offset="100%" stop-color="var(--grn)"/>
+              </linearGradient></defs>
+            </svg>
+            <div class="disc-inner"><div class="disc-score" id="disc-score">—</div><div class="disc-label">/ 10</div></div>
+          </div>
+          <div class="disc-details" id="disc-details"></div>
+        </div>
+      </div>
+
+      <!-- Milestones -->
+      <div class="stitle">Milestones · Jalons d'épargne</div>
+      <div class="milestones-grid" id="milestones-grid"></div>
+
+      <!-- Historique des écarts -->
+      <div class="card an-card" style="margin-top:20px">
+        <div class="ch-header" style="margin-bottom:16px">
+          <div class="stitle" style="margin:0">Historique des écarts mensuels</div>
+          <div class="ch-leg">
+            <div class="leg"><div class="ldot" style="background:var(--green)"></div>En avance</div>
+            <div class="leg"><div class="ldot" style="background:var(--red)"></div>En retard</div>
+          </div>
+        </div>
+        <div style="height:160px"><svg id="ecart-chart" viewBox="0 0 700 160" preserveAspectRatio="none" style="width:100%;height:100%;overflow:visible"></svg></div>
+      </div>
+
+      <!-- Analyse des tendances -->
+      <div class="card an-card" style="margin-top:16px;padding:22px 24px">
+        <div class="stitle" style="margin-bottom:16px">Analyse des tendances</div>
+        <div class="tendances-grid" id="tendances-grid"></div>
+      </div>
+
+    </div>
+
+    <!-- ═══ PAGE : GAMIFICATION ═══ -->
+    <div class="pg" id="page-gm">
+
+      <!-- Streak + Score résumé -->
+      <div class="gm-top-grid">
+        <div class="card gm-streak-card">
+          <div class="streak-icon-wrap" style="background:linear-gradient(135deg,rgba(255,107,157,0.2),rgba(255,181,71,0.15))">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M12 2c0 4-2 6-2 9a4 4 0 008 0c0-3-2-5-2-9"/><path d="M9 12c0 3 1.5 5 3 6 1.5-1 3-3 3-6"/><circle cx="12" cy="19" r="1" fill="var(--amber)"/></svg>
+          </div>
+          <div class="streak-val" id="streak-val">0</div>
+          <div class="streak-lbl">Mois consécutifs en avance</div>
+          <div class="streak-sub" id="streak-sub">—</div>
+        </div>
+        <div class="card gm-streak-card" style="background:linear-gradient(135deg,rgba(82,183,136,0.08),rgba(0,180,216,0.05))">
+          <div class="streak-icon-wrap" style="background:linear-gradient(135deg,rgba(0,180,216,0.2),rgba(82,183,136,0.15))">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="streak-val" id="total-versed">0</div>
+          <div class="streak-lbl">Versements effectués</div>
+          <div class="streak-sub" id="total-versed-sub">sur 59 mois total</div>
+        </div>
+        <div class="card gm-streak-card" style="background:linear-gradient(135deg,rgba(255,181,71,0.08),rgba(255,107,157,0.05))">
+          <div class="streak-icon-wrap" style="background:linear-gradient(135deg,rgba(255,181,71,0.2),rgba(255,107,157,0.1))">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
+          </div>
+          <div class="streak-val" id="badges-earned">0</div>
+          <div class="streak-lbl">Badges débloqués</div>
+          <div class="streak-sub" id="badges-sub">—</div>
+        </div>
+      </div>
+
+      <!-- Comparaison annuelle -->
+      <div class="card an-card" style="margin-bottom:20px;padding:22px 24px">
+        <div class="stitle" style="margin-bottom:16px">Comparaison annuelle · Vitesse d'épargne</div>
+        <div id="annual-compare"></div>
+      </div>
+
+      <!-- Badges grid -->
+      <div class="stitle">Badges & Achievements</div>
+      <div class="badges-grid" id="badges-grid"></div>
+
     </div>
 
   </main>
@@ -759,7 +964,7 @@ applyTheme();
 function toggleTheme(){isLight=!isLight;localStorage.setItem('pe5_th',isLight?'light':'dark');applyTheme();renderChart();}
 
 // ══ NAV ══
-const pnames={ov:'Vue générale',vs:'Versements',rc:'Récap annuel',dr:'Darat',bu:'Budget'};
+const pnames={ov:'Vue générale',vs:'Versements',rc:'Récap annuel',dr:'Darat',bu:'Budget',an:'Analytique',gm:'Achievements'};
 function showPage(id){
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
@@ -773,6 +978,8 @@ function showPage(id){
   if(id==='rc')renderRecap();
   if(id==='bu')renderBudget();
   if(id==='dr')renderDarat();
+  if(id==='an'){renderAnalytics();renderEcartChart();renderSimulator();}
+  if(id==='gm'){renderGamification();renderBadges();}
 }
 function openSB(){document.getElementById('sb').classList.add('open');document.getElementById('sob').classList.add('show');}
 function closeSB(){document.getElementById('sb').classList.remove('open');document.getElementById('sob').classList.remove('show');}
@@ -963,8 +1170,8 @@ function renderTable(){
     html+=`<tr style="${cur?'background:rgba(0,180,216,0.05)':''}">
       <td class="tdm">${p.label}${cur?` <span style="background:rgba(0,180,216,0.18);color:var(--teal);font-size:9px;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:5px">CE MOIS</span>`:''}</td>
       <td class="tda">${fdh(p.monthly)}</td>
-      <td>${bo>0?`<span style="color:var(--grn2);font-weight:700;font-family:'Space Grotesk'">${fdh(bo)}</span>`:'—'}</td>
-      <td>${fr>0?`<span style="font-family:'Space Grotesk'">${fdh(fr)}</span>`:'—'}</td>
+      <td>${bo>0?`<span style="color:var(--grn2);font-weight:700;font-family:'Roboto'">${fdh(bo)}</span>`:'—'}</td>
+      <td>${fr>0?`<span style="font-family:'Roboto'">${fdh(fr)}</span>`:'—'}</td>
       <td class="tda">${tot!==null?fdh(tot):'—'}</td>
       <td class="tdp">${fdh(p.planned)}</td>
       <td class="tdc">${cr!==null?fmt(cr)+' DH':'—'}</td>
@@ -1118,6 +1325,13 @@ function renderAll(){
   if(curPage==='rc')renderRecap();
   if(curPage==='bu')renderBudget();
   if(curPage==='dr')renderDarat();
+  if(curPage==='an'){renderAnalytics();renderEcartChart();renderSimulator();}
+  if(curPage==='gm'){renderGamification();renderBadges();}
+  // Update badge dot
+  const versKeys=Object.keys(D.versements).sort();
+  const lc=lastCumul();
+  const badges=getAllBadges(lc,versKeys,getStreak());
+  document.getElementById('badge-notif-dot').style.display=badges.filter(b=>b.unlocked).length>0?'block':'none';
 }
 
 function init(){
@@ -1198,6 +1412,488 @@ function fallbackMotivation(lc,pct,gap,mois){
     `Tu épargnes 42% de ton salaire. C'est une discipline rare qui te place bien au-dessus de la moyenne.`,
   ];
   return phrases[Math.floor(Math.random()*phrases.length)];
+}
+
+// ══ ANALYTICS PAGE ══
+function renderAnalytics(){
+  renderCountdown();
+  renderDisciplineScore();
+  renderMilestones();
+  renderTendances();
+}
+
+function renderCountdown(){
+  const target=new Date(2030,9,31); // Oct 2030
+  const now=new Date();
+  const start=new Date(2025,11,1); // Dec 2025
+  const totalMs=target-start;
+  const elapsedMs=now-start;
+  const timePct=Math.min(elapsedMs/totalMs*100,100);
+
+  const diffMs=target-now;
+  const days=Math.max(0,Math.floor(diffMs/(1000*60*60*24)));
+  const weeks=Math.floor(days/7);
+  const months=Math.floor(days/30.44);
+
+  document.getElementById('cd-days').textContent=days.toLocaleString('fr-FR');
+  document.getElementById('cd-weeks').textContent=weeks.toLocaleString('fr-FR');
+  document.getElementById('cd-months').textContent=months;
+  document.getElementById('cd-pct-txt').textContent=timePct.toFixed(1)+'% du temps écoulé';
+  setTimeout(()=>{document.getElementById('cd-bar').style.width=timePct+'%';},300);
+}
+
+function renderDisciplineScore(){
+  const versKeys=Object.keys(D.versements).sort();
+  if(!versKeys.length){document.getElementById('disc-score').textContent='—';return;}
+  let onTime=0,ahead=0,late=0,missing=0;
+  const now=new Date();
+  plan.forEach(p=>{
+    if(p.date>now) return;
+    const v=D.versements[p.key];
+    if(!v){missing++;return;}
+    const gap=v.cumul_reel-p.planned;
+    if(gap>0) ahead++;
+    else if(gap>=-5000) onTime++;
+    else late++;
+  });
+  const total=ahead+onTime+late+missing;
+  if(!total){document.getElementById('disc-score').textContent='—';return;}
+  const score=Math.max(0,Math.min(10,((ahead*10+onTime*7+late*3)/total))).toFixed(1);
+  document.getElementById('disc-score').textContent=score;
+
+  // Animate ring
+  const pct=score/10;
+  const circumference=314;
+  setTimeout(()=>{
+    document.getElementById('disc-circle').style.strokeDashoffset=circumference*(1-pct);
+  },400);
+
+  document.getElementById('disc-details').innerHTML=
+    '<div style="font-size:10px;color:var(--text3);margin-top:4px">'+
+    '<span style="color:var(--green)">▲'+ahead+'</span> avance &nbsp;'+
+    '<span style="color:var(--teal)">●'+onTime+'</span> ok &nbsp;'+
+    '<span style="color:var(--red)">▼'+late+'</span> retard &nbsp;'+
+    '<span style="color:var(--text3)">○'+missing+'</span> manquant'+
+    '</div>';
+}
+
+function renderMilestones(){
+  const lc=lastCumul();
+  const MS_SVG={
+    s50:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+    s100:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 10l4-2 4 2"/></svg>',
+    s150:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>',
+    s200:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.21 15 2.66 7.14a2 2 0 01.13-2.2L4.4 2.8A2 2 0 016 2h12a2 2 0 011.6.8l1.6 2.14a2 2 0 01.14 2.2L16.79 15"/><circle cx="12" cy="17" r="5"/></svg>',
+    s300:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    s400:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>',
+    s500:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>',
+    s600:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c0 4-2 6-2 9a4 4 0 008 0c0-3-2-5-2-9"/><path d="M9 12c0 3 1.5 5 3 6 1.5-1 3-3 3-6"/></svg>',
+    s700:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.7 10.3a2.41 2.41 0 000 3.41l7.59 7.58a2.41 2.41 0 003.41 0l7.59-7.58a2.41 2.41 0 000-3.41L13.7 2.71A2.41 2.41 0 0010.3 2.7z"/></svg>',
+    s800:'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+  };
+  const milestones=[
+    {amount:50000,label:'Premier palier',icon:'s50',color:'#00b4d8'},
+    {amount:100000,label:'Six chiffres',icon:'s100',color:'#00d4ff'},
+    {amount:150000,label:'Bonne dynamique',icon:'s150',color:'#52b788'},
+    {amount:200000,label:'1/4 du chemin',icon:'s200',color:'#00e5a0'},
+    {amount:300000,label:'Régularité prouvée',icon:'s300',color:'#ffb547'},
+    {amount:400000,label:'Mi-parcours',icon:'s400',color:'#ff6b9d'},
+    {amount:500000,label:'Ligne droite',icon:'s500',color:'#8b7fff'},
+    {amount:600000,label:'Proche du but',icon:'s600',color:'#ffb547'},
+    {amount:700000,label:'Dernière ligne',icon:'s700',color:'#00d4ff'},
+    {amount:800000,label:'Maison atteinte !',icon:'s800',color:'#00e5a0'},
+  ];
+
+  // Find estimated dates from projection
+  let projCumul=lc;
+  const now=new Date();
+  const curPlanIdx=plan.findIndex(p=>p.key===mk(now));
+  const startIdx=curPlanIdx>=0?curPlanIdx+1:0;
+  const projDates={};
+  let running=lc;
+  for(let i=startIdx;i<plan.length;i++){
+    running+=plan[i].monthly+plan[i].bp;
+    milestones.forEach(m=>{
+      if(!projDates[m.amount]&&running>=m.amount) projDates[m.amount]=plan[i].label;
+    });
+  }
+  // Already passed milestones
+  milestones.forEach(m=>{if(lc>=m.amount&&!projDates[m.amount]) projDates[m.amount]='Atteint ✓';});
+
+  let html='';
+  milestones.forEach(m=>{
+    const achieved=lc>=m.amount;
+    const isNext=!achieved&&milestones.filter(x=>x.amount<m.amount).every(x=>lc>=x.amount);
+    const pct=Math.min(lc/m.amount*100,100);
+    const estDate=projDates[m.amount]||'—';
+    const col=achieved?m.color:isNext?m.color:'var(--text3)';
+    const svgStr=(MS_SVG[m.icon]||'').replace('stroke="currentColor"','stroke="'+col+'"');
+    html+='<div class="ms-card '+(achieved?'achieved':isNext?'next':'')+'" style="border-color:'+(achieved||isNext?col+'44':'')+';">';
+    html+='<div class="ms-icon" style="background:'+(achieved||isNext?col+'18':'rgba(255,255,255,0.04)')+'">'+svgStr+'</div>';
+    html+='<div class="ms-amount" style="color:'+(achieved?col:'var(--text)')+'">'+fmt(m.amount)+' DH</div>';
+    html+='<div class="ms-label">'+m.label+'</div>';
+    html+='<div class="ms-date" style="color:'+col+'">'+
+      (achieved?'✓ Atteint':isNext?'Prochain · '+estDate:estDate)+'</div>';
+    html+='<div class="ms-prog"><div class="ms-prog-fill" style="width:'+pct+'%;background:'+col+'"></div></div>';
+    html+='</div>';
+  });
+  document.getElementById('milestones-grid').innerHTML=html;
+}
+
+function renderEcartChart(){
+  const svg=document.getElementById('ecart-chart');
+  const versKeys=Object.keys(D.versements).sort();
+  if(!versKeys.length){svg.innerHTML='<text x="350" y="80" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="13">Aucune donnée</text>';return;}
+
+  const W=700,H=160,PAD={l:40,r:10,t:20,b:30};
+  const CW=W-PAD.l-PAD.r,CH=H-PAD.t-PAD.b;
+  const data=versKeys.map(k=>{
+    const v=D.versements[k];
+    const p=plan.find(x=>x.key===k);
+    return p?{label:p.label,gap:v.cumul_reel-p.planned,key:k}:null;
+  }).filter(Boolean);
+
+  const maxAbs=Math.max(...data.map(d=>Math.abs(d.gap)),10000);
+  const xStep=CW/(data.length+1);
+  const yMid=PAD.t+CH/2;
+  const yScale=v=>(CH/2)*(v/maxAbs);
+
+  let h='';
+  // Zero line
+  h+=`<line x1="${PAD.l}" y1="${yMid}" x2="${W-PAD.r}" y2="${yMid}" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4 4"/>`;
+  // Gridlines
+  [0.5,1].forEach(f=>{
+    const y1=yMid-yScale(maxAbs*f),y2=yMid+yScale(maxAbs*f);
+    h+=`<line x1="${PAD.l}" y1="${y1}" x2="${W-PAD.r}" y2="${y1}" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>`;
+    h+=`<line x1="${PAD.l}" y1="${y2}" x2="${W-PAD.r}" y2="${y2}" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>`;
+    h+=`<text x="${PAD.l-4}" y="${y1+4}" text-anchor="end" fill="rgba(150,150,200,0.5)" font-size="8">+${fmt(maxAbs*f)}</text>`;
+    h+=`<text x="${PAD.l-4}" y="${y2+4}" text-anchor="end" fill="rgba(150,150,200,0.5)" font-size="8">-${fmt(maxAbs*f)}</text>`;
+  });
+
+  data.forEach((d,i)=>{
+    const x=PAD.l+(i+1)*xStep;
+    const barH=Math.abs(yScale(d.gap));
+    const isPos=d.gap>=0;
+    const color=isPos?'#00e5a0':'#ff5c7c';
+    const y=isPos?yMid-barH:yMid;
+    const bw=Math.max(xStep*0.5,6);
+    h+=`<rect x="${x-bw/2}" y="${y}" width="${bw}" height="${barH}" fill="${color}" opacity="0.8" rx="2"/>`;
+    h+=`<text x="${x}" y="${H-4}" text-anchor="middle" fill="rgba(150,150,200,0.5)" font-size="7">${d.label.substring(0,7)}</text>`;
+    // Value label
+    const valY=isPos?yMid-barH-4:yMid+barH+10;
+    h+=`<text x="${x}" y="${valY}" text-anchor="middle" fill="${color}" font-size="8" font-weight="600">${d.gap>=0?'+':''}${fmt(d.gap/1000)}K</text>`;
+  });
+  svg.innerHTML=h;
+}
+
+function renderTendances(){
+  const versKeys=Object.keys(D.versements).sort();
+  const lc=lastCumul();const li=lastIdx();const now=new Date();const nMo=versKeys.length;
+  // Speed avg 3 months
+  const last3=versKeys.slice(-3);let gains=[];
+  for(let i=1;i<last3.length;i++) gains.push(D.versements[last3[i]].cumul_reel-D.versements[last3[i-1]].cumul_reel);
+  const avg3=gains.length?gains.reduce((a,b)=>a+b,0)/gains.length:0;
+  // Projected date
+  let projDate='Insuffisant';
+  if(avg3>0){const mo=Math.ceil((C.obj-lc)/avg3);const d=new Date(now);d.setMonth(d.getMonth()+mo);projDate=d.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});}
+  const maxStr=getMaxStreak(versKeys);
+  // Trend
+  let trendLabel='Stable',trendColor='var(--text2)',trendIcon='→';
+  if(versKeys.length>=4){
+    const prev=versKeys.slice(-4,-2).map(k=>D.versements[k].cumul_reel);
+    const curr=versKeys.slice(-2).map(k=>D.versements[k].cumul_reel);
+    const prevSpd=prev[1]-prev[0],currSpd=curr[1]-curr[0];
+    if(currSpd>prevSpd*1.15){trendLabel='Accélération';trendColor='var(--green)';trendIcon='↑↑';}
+    else if(currSpd>prevSpd*1.02){trendLabel='Légère hausse';trendColor='var(--teal)';trendIcon='↑';}
+    else if(currSpd<prevSpd*0.85){trendLabel='Ralentissement';trendColor='var(--red)';trendIcon='↓↓';}
+    else if(currSpd<prevSpd*0.98){trendLabel='Légère baisse';trendColor='var(--amber)';trendIcon='↓';}
+  }
+  const onTimeMo=versKeys.filter(k=>{const p=plan.find(x=>x.key===k);return p&&D.versements[k].cumul_reel>=p.planned;}).length;
+  const onTimePct=nMo?Math.round(onTimeMo/nMo*100):0;
+  let bestGain=0,bestMo='—';
+  versKeys.forEach((k,i)=>{const g=i===0?D.versements[k].cumul_reel:D.versements[k].cumul_reel-D.versements[versKeys[i-1]].cumul_reel;if(g>bestGain){bestGain=g;const p=plan.find(x=>x.key===k);bestMo=p?p.label:k;}});
+  let worstGain=Infinity,worstMo='—';
+  versKeys.forEach((k,i)=>{if(i===0)return;const g=D.versements[k].cumul_reel-D.versements[versKeys[i-1]].cumul_reel;if(g<worstGain){worstGain=g;const p=plan.find(x=>x.key===k);worstMo=p?p.label:k;}});
+  const elapsed=Math.max(0,Math.floor((now-new Date(2025,11,1))/(1000*60*60*24*30.44)));
+  const remaining=Math.max(1,C.n-elapsed);
+  const needed=Math.ceil((C.obj-lc)/remaining);
+  const growthRates=[];
+  for(let i=1;i<versKeys.length;i++){const prev=D.versements[versKeys[i-1]].cumul_reel,curr=D.versements[versKeys[i]].cumul_reel;if(prev>0)growthRates.push((curr-prev)/prev*100);}
+  const avgGrowth=growthRates.length?growthRates.reduce((a,b)=>a+b,0)/growthRates.length:0;
+  const cumPlan=li>=0?plan[li].planned:0;
+  const vsRatio=cumPlan>0?lc/cumPlan*100:0;
+
+  const SVGi=(d,c)=>d.replace('currentColor',c);
+  const IC={
+    speed:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+    clock:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+    effort:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+    trend:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>',
+    star:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    trophy:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>',
+    warn:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+    fire:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c0 4-2 6-2 9a4 4 0 008 0c0-3-2-5-2-9"/></svg>',
+    target:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>',
+    chart:'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>',
+  };
+  const now2=new Date();
+  const curIdx2=plan.findIndex(p=>p.key===mk(now2));
+  const expMo=Math.max(1,Math.floor((now2-new Date(2025,11,1))/(1000*60*60*24*30.44)));
+  const regPct=Math.round(nMo/expMo*100);
+
+  // Écart cumulé total
+  const planAtLast=li>=0?plan[li].planned:0;
+  const gapTotal=lc-planAtLast;
+  const gapTotalStr=(gapTotal>=0?'+':'')+fdh(Math.abs(gapTotal));
+  const gapTotalSub=gapTotal>=0?'Avance accumulée depuis déc. 2025':'Retard à combler sur le plan';
+  const gapTotalColor=gapTotal>=0?'var(--green)':'var(--red)';
+
+  // Mois pour 400K
+  const ms400needed=avg3>0?Math.ceil((400000-lc)/avg3):0;
+  const ms400val=lc>=400000?'Atteint ✓':(avg3<=0?'—':ms400needed+' mois');
+  const ms400sub=lc>=400000?'Mi-parcours franchi !':(avg3>0?'À ce rythme · '+fdh(Math.max(0,400000-lc))+' restant':'Ajouter des versements');
+  const ms400color=lc>=400000?'var(--green)':'var(--teal)';
+
+  // Régularité
+  const regVal=nMo+'/'+expMo+' mois saisis';
+  const regSub=regPct+'% des mois renseignés'+(regPct===100?' ✓':'');
+  const regColor=regPct>=90?'var(--green)':'var(--amber)';
+
+  // Capital investi théorique
+  let theoriqueTotal=0;
+  if(curIdx2>=0){for(let i=0;i<=curIdx2;i++) theoriqueTotal+=plan[i].monthly+plan[i].bp;}
+  const theoVal=theoriqueTotal>0?fdh(theoriqueTotal):'—';
+
+  // Vitesse moyenne totale
+  const versArr=Object.keys(D.versements).sort();
+  let vitTotale='—';
+  if(versArr.length>=2){
+    const firstCumul=D.versements[versArr[0]].cumul_reel;
+    const totalGain=lc-firstCumul;
+    vitTotale=fdh(Math.round(totalGain/versArr.length))+'/mois';
+  }
+
+  const items=[
+    {ic:'speed',lbl:'Vitesse moy. 3 derniers mois',val:avg3>0?fdh(Math.round(avg3))+'/mois':'—',sub:avg3>=C.monthly?'Au-dessus de l\'objectif ✓':'En-dessous de '+fdh(C.monthly)+'/mois',color:avg3>=C.monthly?'var(--green)':'var(--amber)'},
+    {ic:'clock',lbl:'Projection 800K à ce rythme',val:projDate,sub:avg3>=C.monthly?'Dans les temps ✓':'Ajouter '+fdh(Math.max(0,Math.ceil(needed-avg3)))+'/mois',color:avg3>=C.monthly?'var(--green)':'var(--red)'},
+    {ic:'effort',lbl:'Effort mensuel nécessaire',val:fdh(Math.max(0,needed))+'/mois',sub:'Pour Oct 2030 · '+remaining+' mois restants',color:needed<=C.monthly?'var(--green)':'var(--amber)'},
+    {ic:'trend',lbl:'Tendance récente',val:trendIcon+' '+trendLabel,sub:'Comparaison des 2 dernières périodes',color:trendColor},
+    {ic:'star',lbl:'Mois respectant le plan',val:onTimePct+'% ('+onTimeMo+'/'+nMo+')',sub:onTimePct>=80?'Excellente discipline ✓':onTimePct>=60?'Bonne régularité':'À améliorer',color:onTimePct>=80?'var(--green)':onTimePct>=60?'var(--teal)':'var(--amber)'},
+    {ic:'trophy',lbl:'Meilleur mois',val:fdh(bestGain),sub:bestMo,color:'var(--teal)'},
+    {ic:'warn',lbl:'Mois le plus faible',val:worstGain!==Infinity&&worstGain>0?fdh(worstGain):'—',sub:worstMo,color:'var(--red)'},
+    {ic:'fire',lbl:'Meilleure série en avance',val:maxStr+' mois consécutifs',sub:maxStr>=5?'Remarquable ✓':maxStr>=3?'Bonne constance':'Continue !',color:'var(--amber)'},
+    {ic:'target',lbl:'Taux réalisation vs plan',val:vsRatio.toFixed(1)+'%',sub:vsRatio>=100?'En avance ✓':vsRatio>=95?'Très proche':'Écart à rattraper',color:vsRatio>=100?'var(--green)':vsRatio>=95?'var(--teal)':'var(--amber)'},
+    {ic:'chart',lbl:'Croissance mensuelle moy.',val:avgGrowth>0?'+'+avgGrowth.toFixed(2)+'%/mois':'—',sub:'Taux de croissance du cumul',color:avgGrowth>=5?'var(--green)':avgGrowth>=2?'var(--teal)':'var(--text2)'},
+    {ic:'speed',lbl:'Écart cumulé total vs plan',val:gapTotalStr,sub:gapTotalSub,color:gapTotalColor},
+    {ic:'target',lbl:'Mois pour atteindre 400K',val:ms400val,sub:ms400sub,color:ms400color},
+    {ic:'chart',lbl:'Régularité des versements',val:regVal,sub:regSub,color:regColor},
+    {ic:'star',lbl:'Capital investi théorique',val:theoVal,sub:'Cumul mensuel prévu depuis déc. 2025',color:'var(--text2)'},
+    {ic:'fire',lbl:'Vitesse moyenne totale',val:vitTotale,sub:'Gain réel moyen sur tous les mois saisis',color:'var(--cyan)'},
+  ];
+  document.getElementById('tendances-grid').innerHTML=items.map(it=>'<div class="tend-card">'+
+    '<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">'+
+      '<span style="color:'+it.color+'">'+SVGi(IC[it.ic],it.color)+'</span>'+
+      '<div class="tend-lbl" style="margin:0">'+it.lbl+'</div>'+
+    '</div>'+
+    '<div class="tend-val" style="color:'+it.color+'">'+it.val+'</div>'+
+    '<div class="tend-sub">'+it.sub+'</div>'+
+  '</div>').join('');
+}
+
+
+// ══ GAMIFICATION ══
+function getStreak(){
+  const versKeys=Object.keys(D.versements).sort();
+  let streak=0;
+  for(let i=versKeys.length-1;i>=0;i--){
+    const k=versKeys[i];
+    const v=D.versements[k];
+    const p=plan.find(x=>x.key===k);
+    if(p&&v&&v.cumul_reel>=p.planned) streak++;
+    else break;
+  }
+  return streak;
+}
+
+function renderGamification(){
+  const versKeys=Object.keys(D.versements).sort();
+  const lc=lastCumul();
+  const streak=getStreak();
+
+  document.getElementById('streak-val').textContent=streak;
+  // streak-icon-wrap color updated via CSS class, no emoji needed
+  document.getElementById('streak-sub').textContent=streak>=5?'Série impressionnante!':streak>=3?'Belle constance!':streak>=1?'Continue!':'Commence ta série!';
+
+  document.getElementById('total-versed').textContent=versKeys.length;
+  document.getElementById('total-versed-sub').textContent='sur 59 mois total · '+Math.round(versKeys.length/59*100)+'% complété';
+
+  // Count unlocked badges
+  const allBadges=getAllBadges(lc,versKeys,streak);
+  const unlocked=allBadges.filter(b=>b.unlocked).length;
+  document.getElementById('badges-earned').textContent=unlocked;
+  document.getElementById('badges-sub').textContent='sur '+allBadges.length+' badges disponibles';
+  document.getElementById('badge-notif-dot').style.display=unlocked>0?'block':'none';
+
+  // Annual comparison
+  const years=[2025,2026,2027,2028,2029,2030];
+  const colors=['#00b4d8','#52b788','#00e5a0','#ffb547','#ff6b9d','#8b7fff'];
+  let acHtml='';
+  let maxSpeed=0;
+  const speeds=years.map(yr=>{
+    const keys=versKeys.filter(k=>k.startsWith(yr));
+    if(keys.length<2) return{yr,speed:0,total:0};
+    const first=D.versements[keys[0]].cumul_reel;
+    const last=D.versements[keys[keys.length-1]].cumul_reel;
+    const speed=Math.round((last-first)/keys.length);
+    maxSpeed=Math.max(maxSpeed,speed);
+    return{yr,speed,total:last-first,n:keys.length};
+  }).filter(s=>s.speed>0);
+
+  if(!speeds.length){document.getElementById('annual-compare').innerHTML='<div style="color:var(--text3);font-size:13px;padding:12px">Données insuffisantes — ajoute plus de versements</div>';return;}
+
+  speeds.forEach((s,i)=>{
+    const barW=maxSpeed>0?Math.round(s.speed/maxSpeed*100):0;
+    acHtml+='<div class="ac-row">'+
+      '<div class="ac-year">'+s.yr+'</div>'+
+      '<div class="ac-bar-wrap">'+
+        '<div class="ac-bar" style="width:'+barW+'%;background:linear-gradient(90deg,'+colors[i]+','+colors[i]+'88)">'+
+          '<span class="ac-bar-val">'+fdh(s.speed)+'/mois</span>'+
+        '</div>'+
+      '</div>'+
+      '<div class="ac-speed">'+fdh(s.total)+' total</div>'+
+    '</div>';
+  });
+  document.getElementById('annual-compare').innerHTML=acHtml;
+}
+
+// SVG icons - modern, original, no emoji
+const BADGE_SVG={
+  step:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>',
+  fire:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c0 4-2 6-2 9a4 4 0 008 0c0-3-2-5-2-9"/><path d="M9 12c0 3 1.5 5 3 6 1.5-1 3-3 3-6"/></svg>',
+  hundred:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 10l4-2 4 2"/></svg>',
+  star:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+  rocket:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg>',
+  target:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>',
+  medal:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7.21 15 2.66 7.14a2 2 0 01.13-2.2L4.4 2.8A2 2 0 016 2h12a2 2 0 011.6.8l1.6 2.14a2 2 0 01.14 2.2L16.79 15"/><circle cx="12" cy="17" r="5"/></svg>',
+  diamond:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.7 10.3a2.41 2.41 0 000 3.41l7.59 7.58a2.41 2.41 0 003.41 0l7.59-7.58a2.41 2.41 0 000-3.41L13.7 2.71A2.41 2.41 0 0010.3 2.7z"/></svg>',
+  crown:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20M5 20V8l7 6 5-9 5 9 7-6v12"/></svg>',
+  home:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+  speed:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 17l-7-14-7 14"/><path d="M5 17h14"/></svg>',
+  excellent:'<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M7.5 12.5l3 3 6-6"/></svg>',
+};
+
+function getAllBadges(lc,versKeys,streak){
+  const paidOnTime=versKeys.filter(k=>{
+    const p=plan.find(x=>x.key===k);
+    return p&&D.versements[k].cumul_reel>=p.planned;
+  }).length;
+  return[
+    {icon:'step', color:'#00b4d8', name:'Premier pas',   desc:'Premier versement effectué',        unlocked:versKeys.length>=1, date:versKeys[0]?plan.find(p=>p.key===versKeys[0])?.label:''},
+    {icon:'fire', color:'#ffb547', name:'Série de 3',    desc:'3 mois consécutifs en avance',       unlocked:streak>=3||getMaxStreak(versKeys)>=3},
+    {icon:'hundred',color:'#00d4ff',name:'100 000 DH',   desc:'Cumul réel ≥ 100 000 DH',           unlocked:lc>=100000},
+    {icon:'star', color:'#00e5a0', name:'Discipline',    desc:'5 mois versés ≥ planifié',           unlocked:paidOnTime>=5},
+    {icon:'rocket',color:'#ff6b9d',name:'Accélération',  desc:'6 mois consécutifs en avance',       unlocked:streak>=6||getMaxStreak(versKeys)>=6},
+    {icon:'target',color:'#ffb547',name:'Quart de route',desc:'200 000 DH atteints',               unlocked:lc>=200000},
+    {icon:'medal',color:'#00b4d8', name:'Régularité',    desc:'10 versements effectués',            unlocked:versKeys.length>=10},
+    {icon:'diamond',color:'#00d4ff',name:'Mi-parcours',  desc:'400 000 DH atteints',               unlocked:lc>=400000},
+    {icon:'crown',color:'#ffb547', name:'Champion',      desc:"12 mois en avance d'affilée",        unlocked:streak>=12||getMaxStreak(versKeys)>=12},
+    {icon:'home', color:'#00e5a0', name:'Objectif !',    desc:'800 000 DH — La maison est à toi',  unlocked:lc>=800000},
+    {icon:'speed',color:'#ff6b9d', name:'Vitesse +',     desc:'Gain mensuel > 15 000 DH',           unlocked:versKeys.some((k,i)=>i>0&&D.versements[k].cumul_reel-D.versements[versKeys[i-1]].cumul_reel>=15000)},
+    {icon:'excellent',color:'#52b788',name:'Excellent',  desc:'Score de discipline ≥ 9/10',         unlocked:(()=>{let a=0,t=0;versKeys.forEach(k=>{const p=plan.find(x=>x.key===k);if(p){t++;if(D.versements[k].cumul_reel>=p.planned)a++;}});return t>=3&&a/t>=0.9;})()},
+  ];
+}
+
+function getMaxStreak(versKeys){
+  let max=0,cur=0;
+  versKeys.forEach(k=>{
+    const p=plan.find(x=>x.key===k);
+    if(p&&D.versements[k]&&D.versements[k].cumul_reel>=p.planned) cur++;
+    else cur=0;
+    max=Math.max(max,cur);
+  });
+  return max;
+}
+
+function renderBadges(){
+  const versKeys=Object.keys(D.versements).sort();
+  const lc=lastCumul();
+  const streak=getStreak();
+  const badges=getAllBadges(lc,versKeys,streak);
+  document.getElementById('badges-grid').innerHTML=badges.map(b=>{
+    const svgStr=(BADGE_SVG[b.icon]||'').replace('stroke="currentColor"','stroke="'+(b.unlocked?b.color:'var(--text3)')+'"');
+    return '<div class="badge-card '+(b.unlocked?'unlocked':'locked')+'" style="'+(b.unlocked?'border-color:'+b.color+'44':'')+'">'+
+      '<div class="badge-icon" style="background:'+(b.unlocked?b.color+'18':'rgba(255,255,255,0.04)')+'">'+svgStr+'</div>'+
+      '<div class="badge-name" style="color:'+(b.unlocked?b.color:'var(--text3)')+'">'+b.name+'</div>'+
+      '<div class="badge-desc">'+b.desc+'</div>'+
+      (b.unlocked
+        ?'<div class="badge-date" style="color:'+b.color+'">✓ Débloqué'+(b.date?' · '+b.date:'')+'</div>'
+        :'<div class="badge-lock"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> À débloquer</div>')+
+    '</div>';
+  }).join('');
+}
+
+// ══ EXPORT PDF ══
+function exportPDF(){
+  const lc=lastCumul();
+  const li=lastIdx();
+  const now=new Date();
+  const refEntry=plan.find(p=>p.key===mk(now))||(li>=0?plan[li]:plan[0]);
+  const gap=lc-refEntry.planned;
+  const streak=getStreak();
+
+  const w=window.open('','_blank');
+  w.document.write('<html><head><meta charset="UTF-8"><title>PE5 Rapport '+now.toLocaleDateString('fr-FR')+'</title>');
+  w.document.write('<style>body{font-family:Arial,sans-serif;max-width:800px;margin:40px auto;color:#1a1a2e;padding:0 20px;}');
+  w.document.write('h1{color:#00b4d8;border-bottom:3px solid #00b4d8;padding-bottom:12px;font-size:24px;}');
+  w.document.write('h2{color:#52b788;font-size:16px;margin-top:28px;margin-bottom:10px;}');
+  w.document.write('.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0;}');
+  w.document.write('.kpi{background:#f0f8ff;border:1px solid #d0e8f0;border-radius:8px;padding:14px;text-align:center;}');
+  w.document.write('.kpi-val{font-size:22px;font-weight:800;color:#00b4d8;}');
+  w.document.write('.kpi-lbl{font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;}');
+  w.document.write('.ok{color:#00a86b;} .warn{color:#e67e22;} .bad{color:#e74c3c;}');
+  w.document.write('table{width:100%;border-collapse:collapse;font-size:12px;}');
+  w.document.write('th{background:#00b4d8;color:white;padding:8px;text-align:left;}');
+  w.document.write('td{padding:7px 8px;border-bottom:1px solid #eee;}');
+  w.document.write('tr:nth-child(even){background:#f8f8f8;}');
+  w.document.write('.footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;font-size:11px;color:#999;text-align:center;}');
+  w.document.write('</style></head><body>');
+  w.document.write('<h1>🏠 PE5 · Rapport Épargne</h1>');
+  w.document.write('<p style="color:#666;margin-bottom:20px">Généré le '+now.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})+'</p>');
+
+  // KPIs
+  w.document.write('<h2>📊 KPIs Principaux</h2><div class="kpi-grid">');
+  w.document.write('<div class="kpi"><div class="kpi-val">'+fmt(lc)+' DH</div><div class="kpi-lbl">Cumul réel</div></div>');
+  w.document.write('<div class="kpi"><div class="kpi-val '+(gap>=0?'ok':'bad')+'">'+fmt(refEntry.planned)+' DH</div><div class="kpi-lbl">Planifié ce mois</div></div>');
+  w.document.write('<div class="kpi"><div class="kpi-val '+(gap>=0?'ok':'bad')+'">'+(gap>=0?'+':'')+fmt(gap)+' DH</div><div class="kpi-lbl">Écart</div></div>');
+  w.document.write('<div class="kpi"><div class="kpi-val">'+(lc/C.obj*100).toFixed(1)+'%</div><div class="kpi-lbl">Progression</div></div>');
+  w.document.write('<div class="kpi"><div class="kpi-val ok">'+streak+'</div><div class="kpi-lbl">Série actuelle</div></div>');
+  const elapsed=Math.max(0,Math.floor((now-new Date(2025,11,1))/(1000*60*60*24*30.44)));
+  w.document.write('<div class="kpi"><div class="kpi-val">'+Math.max(0,59-elapsed)+'</div><div class="kpi-lbl">Mois restants</div></div>');
+  w.document.write('</div>');
+
+  // Versements table
+  w.document.write('<h2>📋 Historique des versements</h2>');
+  w.document.write('<table><tr><th>Mois</th><th>Planifié</th><th>Réel</th><th>Écart</th><th>%</th><th>Statut</th></tr>');
+  Object.keys(D.versements).sort().forEach(k=>{
+    const v=D.versements[k];
+    const p=plan.find(x=>x.key===k);
+    if(!p) return;
+    const ec=v.cumul_reel-p.planned;
+    w.document.write('<tr>');
+    w.document.write('<td>'+p.label+'</td>');
+    w.document.write('<td>'+fmt(p.planned)+' DH</td>');
+    w.document.write('<td>'+fmt(v.cumul_reel)+' DH</td>');
+    w.document.write('<td class="'+(ec>=0?'ok':'bad')+'">'+(ec>=0?'+':'')+fmt(ec)+' DH</td>');
+    w.document.write('<td>'+(v.cumul_reel/C.obj*100).toFixed(1)+'%</td>');
+    w.document.write('<td class="'+(ec>=0?'ok':'warn')+'">'+v.statut+'</td>');
+    w.document.write('</tr>');
+  });
+  w.document.write('</table>');
+
+  w.document.write('<div class="footer">PE5 · Gestion d\'Épargne · Objectif immobilier 800 000 DH · Oct 2030</div>');
+  w.document.write('</body></html>');
+  w.document.close();
+  setTimeout(()=>w.print(),500);
 }
 
 // ══ PWA ══
